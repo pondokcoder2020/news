@@ -52,17 +52,25 @@
                 },
                 {
                     "data" : null, render: function(data, type, row, meta) {
-                        return row.title;
+                        return "<div class=\"row\">" +
+                            "<div class=\"col-lg-1\">" +
+                            "<img style=\"width:50px; height: 50px;\" class=\"img-responsive\" src=\"" + __HOST__ + "/images/berita/SP" + row.uid + ".png\" />" +
+                            "</div>" +
+                            "<div class=\"col-lg-11\">" +
+                            "<h4>" + row.title + "</h4>" +
+                            "" + row.content_short +
+                            "</div>" +
+                            "</div>";
                     }
                 },
                 {
                     "data" : null, render: function(data, type, row, meta) {
-                        return row.content_short;
+                        return "";
                     }
                 },
                 {
                     "data" : null, render: function(data, type, row, meta) {
-                        return row.content_short;
+                        return row.nama;
                     }
                 },
                 {

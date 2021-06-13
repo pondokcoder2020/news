@@ -66,7 +66,10 @@
         </div>
         <div class="foocol"></div>
         <div class="foocol last">
-            <span class=""><img alt="My Image" src="../../wp-content/uploads/2014/12/stylish-logo.png"></span>
+            <div id="titles">
+                <h1><a href="<?php echo __HOSTCLIENT__; ?>"><?php echo __CLIENT_NAME__; ?></a></h1>
+                <h2 class="description clearfix">-<?php echo __CLIENT_SLOGAN__; ?>-</h2>
+            </div>
             <p style="margin:25px 0 50px 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed erat enim. Nullam a risus mauris. Praesent ultricies pulvinar est, sit amet venenatis metus rhoncus vitae. Maecenas bibendum venenatis quam. In volutpat facilisis vehicula.<br>
                 <a class="rad comment-reply-link" href="#" style="float:right;">Read More</a></p>
             <ul class="social-menu">

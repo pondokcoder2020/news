@@ -28,7 +28,7 @@
                             </div>
                             <div class="card-body tab-content">
                                 <div class="tab-pane active show fade">
-                                    <table class="table table-bordered" id="table-berita">
+                                    <table class="table table-bordered largeDataType" id="table-berita">
                                         <thead class="thead-dark">
                                         <tr>
                                             <th class="wrap_content">No</th>

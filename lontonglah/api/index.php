@@ -90,7 +90,8 @@ try {
 				(($requestTarget == 'PondokCoder\\Pegawai') && $_SERVER['REQUEST_METHOD'] === 'POST') &&
 				(in_array($ParameterBuilder['request'], $exclude_auth))
 			) ||
-            $requestTarget == 'PondokCoder\\JKN'
+            $requestTarget == 'PondokCoder\\JKN' ||
+            ((($requestTarget == 'PondokCoder\\Berita') && $_SERVER['REQUEST_METHOD'] === 'GET'))
 		) {
 			if(in_array($ParameterBuilder['request'], $exclude_auth)) {
 				$ClassMethod = call_user_func_array('PondokCoder\\Pegawai::__POST__', array($ParameterBuilder));
@@ -98,6 +99,18 @@ try {
 			} else {
 			    if($requestTarget == 'PondokCoder\\JKN') {
                     $ClassMethod = call_user_func_array('PondokCoder\\JKN::__POST__', array($ParameterBuilder));
+                    echo json_encode($ClassMethod);
+                } else if($requestTarget == 'PondokCoder\\Berita') {
+			        if($_SERVER['REQUEST_METHOD'] === 'GET') {
+                        $ClassMethod = call_user_func_array('PondokCoder\\Berita::__GET__', array($ParameterBuilder));
+                    } else if($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        $ClassMethod = call_user_func_array('PondokCoder\\Berita::__POST__', array($ParameterBuilder));
+                    } else if($_SERVER['REQUEST_METHOD'] === 'PUT') {
+                        $ClassMethod = call_user_func_array('PondokCoder\\Berita::__PUT__', array($ParameterBuilder));
+                    } else if($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+                        $ClassMethod = call_user_func_array('PondokCoder\\Berita::__DELETE__', array($ParameterBuilder));
+                    }
+
                     echo json_encode($ClassMethod);
                 } else {
                     http_response_code(403);

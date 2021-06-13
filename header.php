@@ -12,7 +12,7 @@
         </ul>
         <div id="titles">
             <h1><a href="<?php echo __HOSTCLIENT__; ?>"><?php echo __CLIENT_NAME__; ?></a></h1>
-            <h2 class="description clearfix"><?php echo __CLIENT_SLOGAN__; ?></h2>
+            <h2 class="description clearfix">-<?php echo __CLIENT_SLOGAN__; ?>-</h2>
         </div>
         <div class="righthead">
             <ul class="social-menu">
@@ -132,7 +132,7 @@
                             </li>
                         </ul>
                     </div>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="top-menu-cathegories">
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-category" id="menu-item-4175">
                             <a href="blog/category/lifestyle/index.html">Lifestyle</a>
                         </li>
